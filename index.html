@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New site</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+  
+  <div class="container cont_reg">
+    <div class="reg_img">
+      <img src="./assets/reg_bg.jpg" alt="">
+    </div>
+      <div class="wrapper wrapper_reg">
+  
+        <div class="wrapper_item">
+      <div class="content">
+        <div class="reg_content">
+          <h1 class="reg_title">Регистрация начинается отсюда</h1>
+          <div class="reg_des">Пожалуйста указывайте свои настоящие данные, они будут использоваться в дальнейшем на собеседовании.</div>
+          <div class="reg">
+            <div class="reg_form">
+              <form @submit.prevent="register" class="reg_form-content">
+                <label class="reg_label" for="name">Ваше ФИО</label>
+                <input v-model="name"  class="reg_input" placeholder="Name" name="name" type="text">
+  
+                <label class="reg_label" for="email">Электронная почта</label>
+                <input v-model="email" class="reg_input" placeholder="email@gmail.com" name="email" type="email">
+  
+                <label class="reg_label" for="phone">Ваш номер телефона</label>
+                <input v-model="phone" class="reg_input" placeholder="88005555555" name="phone" type="number">              
+                
+                <label class="reg_label" for="pass">Пароль</label>
+                <input v-model="password" class="reg_input" placeholder="password" name="pass" type="password">
+  
+                <div class="reg_conf">
+                  <input class="reg_check" type="checkbox">
+                  <span class="reg_conf-des">Я согласен с <a href="#">политикой конфиденциальности</a></span>
+                </div>
+  
+                <a href="./usertest.html" class="reg_btn">Создать аккаунт</a>
+              </form>
+  
+              <div class="reg_log">Уже есть аккаунт? <a href="./reg.html"  class="reg_log-btn" >Войдите</a> в него.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  <!-- 
+      <div class="content" >
+        <div class="reg_content">
+          <h1 class="reg_title">Авторизация</h1>
+          <div class="reg">
+            <div class="reg_form">
+              <form @submit.prevent class="reg_form-content">
+  
+  
+                <label class="reg_label" for="email">Введите вашу почту или телефон</label>
+                <input v-model="email" class="reg_input" placeholder="email@gmail.com" name="email" type="email">             
+                
+                <label class="reg_label" for="pass">Пароль</label>
+                <input v-model="password" class="reg_input" placeholder="password" name="pass" type="password">
+  
+                <button type="submit" class="reg_btn" @click="log">Войти</button>
+              </form>
+  
+              <div class="reg_log">Еще нет аккаунта? <button class="reg_log-btn" @click="openReg">Зарегестрируйтесь.</button></div>
+            </div>
+          </div>
+        </div>
+  
+    
+      </div> -->
+        </div>
+  
+        <div class="wrapper_item info">
+          <div class="info_logo">
+            <img src="./assets/logo_reg.svg" alt="">
+          </div>
+  
+          <div class="info_text">Добро пожаловать! Раз вы попали на эту страницу, значит вы являетесь соискалем и уже знакомы с нашей компанией. Для того чтобы попасть к нам на собеседование в офис вам потребуется зарегистрироваться на данной платформе. После прохождения теста вы сможете узнать, соответствуете ли вы нашим стандартам. И помните, используйте только ваши актуальные ФИО, адрес электронной почты и номер телефона они будут использованы в дальнейших этапах после тестрования.</div>
+        </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
